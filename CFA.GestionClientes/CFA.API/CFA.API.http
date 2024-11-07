@@ -1,0 +1,6 @@
+@CFA.API_HostAddress = http://localhost:5016
+
+GET {{CFA.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,527 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Tests/CFA.Tests.csproj": {}
+  },
+  "projects": {
+    "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.API/CFA.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.API/CFA.API.csproj",
+        "projectName": "CFA.API",
+        "projectPath": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.API/CFA.API.csproj",
+        "packagesPath": "/Users/yeisond./.nuget/packages/",
+        "outputPath": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.API/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/yeisond./.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Business/CFA.Business.csproj": {
+                "projectPath": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Business/CFA.Business.csproj"
+              },
+              "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Common/CFA.Common.csproj": {
+                "projectPath": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Common/CFA.Common.csproj"
+              },
+              "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.DataAccess/CFA.DataAccess.csproj": {
+                "projectPath": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.DataAccess/CFA.DataAccess.csproj"
+              },
+              "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Entities/CFA.Entities.csproj": {
+                "projectPath": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Entities/CFA.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Business/CFA.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Business/CFA.Business.csproj",
+        "projectName": "CFA.Business",
+        "projectPath": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Business/CFA.Business.csproj",
+        "packagesPath": "/Users/yeisond./.nuget/packages/",
+        "outputPath": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Business/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/yeisond./.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Common/CFA.Common.csproj": {
+                "projectPath": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Common/CFA.Common.csproj"
+              },
+              "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.DataAccess/CFA.DataAccess.csproj": {
+                "projectPath": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.DataAccess/CFA.DataAccess.csproj"
+              },
+              "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Entities/CFA.Entities.csproj": {
+                "projectPath": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Entities/CFA.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.10.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Common/CFA.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Common/CFA.Common.csproj",
+        "projectName": "CFA.Common",
+        "projectPath": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Common/CFA.Common.csproj",
+        "packagesPath": "/Users/yeisond./.nuget/packages/",
+        "outputPath": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Common/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/yeisond./.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.DataAccess/CFA.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.DataAccess/CFA.DataAccess.csproj",
+        "projectName": "CFA.DataAccess",
+        "projectPath": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.DataAccess/CFA.DataAccess.csproj",
+        "packagesPath": "/Users/yeisond./.nuget/packages/",
+        "outputPath": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.DataAccess/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/yeisond./.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Common/CFA.Common.csproj": {
+                "projectPath": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Common/CFA.Common.csproj"
+              },
+              "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Entities/CFA.Entities.csproj": {
+                "projectPath": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Entities/CFA.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Entities/CFA.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Entities/CFA.Entities.csproj",
+        "projectName": "CFA.Entities",
+        "projectPath": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Entities/CFA.Entities.csproj",
+        "packagesPath": "/Users/yeisond./.nuget/packages/",
+        "outputPath": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Entities/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/yeisond./.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Common/CFA.Common.csproj": {
+                "projectPath": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Common/CFA.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.ComponentModel.DataAnnotations": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Tests/CFA.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Tests/CFA.Tests.csproj",
+        "projectName": "CFA.Tests",
+        "projectPath": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Tests/CFA.Tests.csproj",
+        "packagesPath": "/Users/yeisond./.nuget/packages/",
+        "outputPath": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/yeisond./.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.API/CFA.API.csproj": {
+                "projectPath": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.API/CFA.API.csproj"
+              },
+              "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Business/CFA.Business.csproj": {
+                "projectPath": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Business/CFA.Business.csproj"
+              },
+              "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Common/CFA.Common.csproj": {
+                "projectPath": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Common/CFA.Common.csproj"
+              },
+              "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.DataAccess/CFA.DataAccess.csproj": {
+                "projectPath": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.DataAccess/CFA.DataAccess.csproj"
+              },
+              "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Entities/CFA.Entities.csproj": {
+                "projectPath": "/Users/yeisond./Desktop/Prueba CFA/Principal/CRUD/CFA.GestionClientes/CFA.Entities/CFA.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[6.12.1, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.11.1, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.5.3, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.5.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

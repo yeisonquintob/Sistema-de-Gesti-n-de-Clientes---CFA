@@ -1,0 +1,73 @@
+
+-- Crear la base de datos
+CREATE DATABASE DB_CFA
+GO
+
+USE DB_CFA
+GO
+
+-- Crear tabla para tipos de documento
+CREATE TABLE TipoDocumento (
+    IdTipoDocumento VARCHAR(2) PRIMARY KEY,
+    Descripcion VARCHAR(50) NOT NULL
+)
+GO
+
+-- Crear tabla para género
+CREATE TABLE Genero (
+    IdGenero CHAR(1) PRIMARY KEY,
+    Descripcion VARCHAR(20) NOT NULL
+)
+GO
+
+-- Crear tabla principal de clientes
+CREATE TABLE Clientes (
+    Codigo BIGINT IDENTITY(1,1) PRIMARY KEY,
+    TipoDocumento VARCHAR(2) NOT NULL,
+    NumeroDocumento VARCHAR(11) NOT NULL,
+    Nombres VARCHAR(30) NOT NULL,
+    Apellido1 VARCHAR(30) NOT NULL,
+    Apellido2 VARCHAR(30) NULL,
+    Genero CHAR(1) NOT NULL,
+    FechaNacimiento DATE NOT NULL,
+    Email VARCHAR(100) NOT NULL,
+    FechaRegistro DATETIME DEFAULT GETDATE(),
+    CONSTRAINT FK_Cliente_TipoDocumento FOREIGN KEY (TipoDocumento) REFERENCES TipoDocumento(IdTipoDocumento),
+    CONSTRAINT FK_Cliente_Genero FOREIGN KEY (Genero) REFERENCES Genero(IdGenero),
+    CONSTRAINT UQ_Cliente_Documento UNIQUE (TipoDocumento, NumeroDocumento)
+)
+GO
+
+-- Crear tabla para direcciones de clientes
+CREATE TABLE DireccionesCliente (
+    IdDireccion BIGINT IDENTITY(1,1) PRIMARY KEY,
+    CodigoCliente BIGINT NOT NULL,
+    Direccion VARCHAR(100) NOT NULL,
+    TipoDireccion VARCHAR(20) NOT NULL, -- 'Casa', 'Trabajo', etc.
+    FechaRegistro DATETIME DEFAULT GETDATE(),
+    CONSTRAINT FK_Direcciones_Cliente FOREIGN KEY (CodigoCliente) REFERENCES Clientes(Codigo)
+)
+GO
+
+-- Crear tabla para teléfonos de clientes
+CREATE TABLE TelefonosCliente (
+    IdTelefono BIGINT IDENTITY(1,1) PRIMARY KEY,
+    CodigoCliente BIGINT NOT NULL,
+    NumeroTelefono VARCHAR(15) NOT NULL,
+    TipoTelefono VARCHAR(20) NOT NULL, -- 'Casa', 'Celular', 'Trabajo', etc.
+    FechaRegistro DATETIME DEFAULT GETDATE(),
+    CONSTRAINT FK_Telefonos_Cliente FOREIGN KEY (CodigoCliente) REFERENCES Clientes(Codigo)
+)
+GO
+
+-- Insertar datos básicos
+INSERT INTO TipoDocumento (IdTipoDocumento, Descripcion) VALUES 
+('CC', 'Cédula Ciudadanía'),
+('TI', 'Tarjeta Identidad'),
+('RC', 'Registro Civil')
+GO
+
+INSERT INTO Genero (IdGenero, Descripcion) VALUES 
+('F', 'Femenino'),
+('M', 'Masculino')
+GO

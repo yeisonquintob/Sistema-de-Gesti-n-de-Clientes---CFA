@@ -1,0 +1,124 @@
+-- Inserción de un nuevo cliente (Registro 4)
+EXEC sp_InsertarCliente 
+    @p_TipoDocumento = 'CC',
+    @p_NumeroDocumento = '1234567890',
+    @p_Nombres = 'Juan',
+    @p_Apellido1 = 'Pérez',
+    @p_Apellido2 = 'González',
+    @p_Genero = 'M',
+    @p_FechaNacimiento = '1990-01-15',
+    @p_Email = 'juan.perez@example.com';
+
+-- Obtener el CódigoCliente del nuevo registro
+DECLARE @NuevoCodigoCliente BIGINT;
+SET @NuevoCodigoCliente = SCOPE_IDENTITY();
+
+-- Inserción de dirección para el nuevo cliente
+EXEC sp_InsertarDireccionCliente 
+    @p_CodigoCliente = @NuevoCodigoCliente,
+    @p_Direccion = 'Carrera 10 # 20-30',
+    @p_TipoDireccion = 'Casa';
+
+-- Inserción de teléfono para el nuevo cliente
+EXEC sp_InsertarTelefonoCliente 
+    @p_CodigoCliente = @NuevoCodigoCliente,
+    @p_NumeroTelefono = '3001234567',
+    @p_TipoTelefono = 'Celular';
+
+-- Obtener CódigoCliente del registro 1 para consultas
+DECLARE @CodigoClienteRegistro1 BIGINT = 1; -- Cambia este valor según el registro 1
+
+-- 1. Prueba de sp_ActualizarCliente
+EXEC sp_ActualizarCliente 
+    @p_CodigoCliente = @NuevoCodigoCliente,
+    @p_TipoDocumento = 'CC',
+    @p_NumeroDocumento = '1234567890',
+    @p_Nombres = 'Juan Carlos',
+    @p_Apellido1 = 'Pérez',
+    @p_Apellido2 = 'González',
+    @p_Genero = 'M',
+    @p_FechaNacimiento = '1990-01-15',
+    @p_Email = 'juan.c.perez@example.com';
+
+-- 2. Prueba de sp_ActualizarDireccionCliente
+EXEC sp_ActualizarDireccionCliente 
+    @p_IdDireccion = 1, -- Cambia este valor según el ID de la dirección del registro 1
+    @p_CodigoCliente = @NuevoCodigoCliente,
+    @p_Direccion = 'Carrera 20 # 30-40',
+    @p_TipoDireccion = 'Casa';
+
+-- 3. Prueba de sp_ActualizarTelefonoCliente
+EXEC sp_ActualizarTelefonoCliente 
+    @p_IdTelefono = 1, -- Cambia este valor según el ID del teléfono del registro 1
+    @p_CodigoCliente = @NuevoCodigoCliente,
+    @p_NumeroTelefono = '3101234567',
+    @p_TipoTelefono = 'Celular';
+
+-- 4. Prueba de sp_BuscarClientesPorDocumento
+EXEC sp_BuscarClientesPorDocumento @p_NumeroDocumento = '1234567890';
+
+-- 5. Prueba de sp_BuscarClientesPorNombre
+EXEC sp_BuscarClientesPorNombre @p_Nombre = 'Juan';
+
+-- 6. Prueba de sp_BuscarClientesPorRangoFechaNacimiento
+EXEC sp_BuscarClientesPorRangoFechaNacimiento 
+    @p_FechaInicio = '1990-01-01', 
+    @p_FechaFin = '1990-12-31';
+
+-- 7. Prueba de sp_ClientesConMultiplesDirecciones
+EXEC sp_ClientesConMultiplesDirecciones;
+
+-- 8. Prueba de sp_ClientesConMultiplesTelefonos
+EXEC sp_ClientesConMultiplesTelefonos;
+
+-- 9. Prueba de sp_EliminarCliente
+EXEC sp_EliminarCliente @p_CodigoCliente = @NuevoCodigoCliente;
+
+-- 10. Prueba de sp_EliminarDireccionCliente
+EXEC sp_EliminarDireccionCliente @p_IdDireccion = 1; -- Cambia este valor según el ID de la dirección del registro 1
+
+-- 11. Prueba de sp_EliminarTelefonoCliente
+EXEC sp_EliminarTelefonoCliente @p_IdTelefono = 1; -- Cambia este valor según el ID del teléfono del registro 1
+
+-- 12. Prueba de sp_InsertarCliente (repetir para validar inserción nuevamente)
+EXEC sp_InsertarCliente 
+    @p_TipoDocumento = 'TI',
+    @p_NumeroDocumento = '0987654321',
+    @p_Nombres = 'María',
+    @p_Apellido1 = 'Gómez',
+    @p_Apellido2 = 'Lopez',
+    @p_Genero = 'F',
+    @p_FechaNacimiento = '2005-05-20',
+    @p_Email = 'maria.gomez@example.com';
+
+-- Obtener el CódigoCliente del nuevo registro
+DECLARE @NuevoCodigoCliente2 BIGINT;
+SET @NuevoCodigoCliente2 = SCOPE_IDENTITY();
+
+-- 13. Prueba de sp_ObtenerClientePorCodigo
+EXEC sp_ObtenerClientePorCodigo @p_Codigo = @CodigoClienteRegistro1;
+
+-- 14. Prueba de sp_ObtenerDireccionesCliente
+EXEC sp_ObtenerDireccionesCliente @p_CodigoCliente = @CodigoClienteRegistro1;
+
+-- 15. Prueba de sp_ObtenerTelefonosCliente
+EXEC sp_ObtenerTelefonosCliente @p_CodigoCliente = @CodigoClienteRegistro1;
+
+-- 16. Prueba de sp_ValidarDocumentoUnico
+EXEC sp_ValidarDocumentoUnico 
+    @p_TipoDocumento = 'CC',
+    @p_NumeroDocumento = '1234567890';
+
+-- 17. Prueba de sp_ValidarEdadTipoDocumento 
+EXEC sp_ValidarEdadTipoDocumento 
+    @p_TipoDocumento = 'CC',
+    @p_FechaNacimiento = '1990-01-15';
+
+-- 18. Prueba de sp_ValidarFormatoEmail
+EXEC sp_ValidarFormatoEmail @p_Email = 'juan.perez@example.com';
+
+-- 19. Prueba de sp_EliminarDireccionCliente
+EXEC sp_EliminarDireccionCliente @p_IdDireccion = 1; -- Cambia según ID de dirección
+
+-- 20. Prueba de sp_EliminarTelefonoCliente
+EXEC sp_EliminarTelefonoCliente @p_IdTelefono = 1; -- Cambia según ID de teléfono

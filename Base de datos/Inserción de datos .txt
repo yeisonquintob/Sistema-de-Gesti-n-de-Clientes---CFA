@@ -1,0 +1,27 @@
+-- Inserción de 3 registros completos en las tablas
+
+-- Insertar clientes
+INSERT INTO Clientes (TipoDocumento, NumeroDocumento, Nombres, Apellido1, Apellido2, Genero, FechaNacimiento, Email)
+VALUES
+    ('CC', '1234567890', 'Juan', 'Pérez', 'García', 'M', '1985-05-15', 'juan.perez@example.com'),
+    ('TI', '9876543210', 'Ana', 'Martínez', 'López', 'F', '2005-03-10', 'ana.martinez@example.com'),
+    ('RC', '1122334455', 'Luis', 'Fernández', NULL, 'M', '2020-07-25', 'luis.fernandez@example.com');
+
+-- Insertar direcciones de clientes
+INSERT INTO DireccionesCliente (CodigoCliente, Direccion, TipoDireccion)
+VALUES
+    (SCOPE_IDENTITY(), 'Calle 123, Barrio Centro', 'Casa'),
+    (SCOPE_IDENTITY(), 'Carrera 45, Edificio ABC', 'Trabajo'),
+    (SCOPE_IDENTITY(), 'Avenida Siempre Viva, Casa 742', 'Otro');
+
+-- Insertar teléfonos de clientes
+INSERT INTO TelefonosCliente (CodigoCliente, NumeroTelefono, TipoTelefono)
+VALUES
+    (SCOPE_IDENTITY(), '3012345678', 'Celular'),
+    (SCOPE_IDENTITY(), '601234567', 'Casa'),
+    (SCOPE_IDENTITY(), '701234567', 'Trabajo');
+
+-- Nota: Asegúrate de usar la lógica correcta para obtener los valores de CodigoCliente 
+-- tras cada inserción, como se ejemplifica arriba. También puedes modificar los valores 
+-- de las direcciones y números de teléfono según sea necesario.
+
